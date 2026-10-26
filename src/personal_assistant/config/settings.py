@@ -6,6 +6,10 @@ class Settings(BaseSettings):
     app_version: str = "0.1.0"
     debug: bool = False
 
+    llm_provider: str = "ollama"
+    llm_model: str = "llama3.2:3b"
+    ollama_host: str = "http://localhost:11434"
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
